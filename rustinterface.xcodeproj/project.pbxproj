@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882503761AC1FA9C009FD989 /* rust_fat_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 882503751AC1FA9C009FD989 /* rust_fat_lib.a */; };
 		88BF9B4E1AC1E80C0077DE9A /* rust_interop.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BF9B4D1AC1E80C0077DE9A /* rust_interop.m */; };
-		88CB174E1AC1EA1900CCC8F7 /* rust_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CB174D1AC1EA1900CCC8F7 /* rust_lib.a */; };
 		88CF8B811AC1BF6A0019DEF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF8B801AC1BF6A0019DEF4 /* main.m */; };
 		88CF8B841AC1BF6A0019DEF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF8B831AC1BF6A0019DEF4 /* AppDelegate.m */; };
 		88CF8B871AC1BF6A0019DEF4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF8B861AC1BF6A0019DEF4 /* GameScene.m */; };
@@ -31,8 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		882503751AC1FA9C009FD989 /* rust_fat_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = rust_fat_lib.a; path = rust/bin/rust_fat_lib.a; sourceTree = "<group>"; };
 		88BF9B4D1AC1E80C0077DE9A /* rust_interop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rust_interop.m; sourceTree = "<group>"; };
-		88CB174D1AC1EA1900CCC8F7 /* rust_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = rust_lib.a; sourceTree = "<group>"; };
 		88CF8B7B1AC1BF6A0019DEF4 /* rustinterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rustinterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CF8B7F1AC1BF6A0019DEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88CF8B801AC1BF6A0019DEF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88CB174E1AC1EA1900CCC8F7 /* rust_lib.a in Frameworks */,
+				882503761AC1FA9C009FD989 /* rust_fat_lib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 		88CF8B721AC1BF6A0019DEF4 = {
 			isa = PBXGroup;
 			children = (
-				88CB174D1AC1EA1900CCC8F7 /* rust_lib.a */,
+				882503751AC1FA9C009FD989 /* rust_fat_lib.a */,
 				88CF8B7D1AC1BF6A0019DEF4 /* rustinterface */,
 				88CF8B9C1AC1BF6A0019DEF4 /* rustinterfaceTests */,
 				88CF8B7C1AC1BF6A0019DEF4 /* Products */,
@@ -371,6 +371,7 @@
 					"$(inherited)",
 					/Users/jaburns/dev/rustios,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/rust/bin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -386,6 +387,7 @@
 					"$(inherited)",
 					/Users/jaburns/dev/rustios,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/rust/bin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
