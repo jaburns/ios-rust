@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+pushd src-rust
+    rustc --target=x86_64-apple-ios lib.rs --crate-type=staticlib -O -o lib-x64.a || exit 1
+    rustc --target=i386-apple-ios lib.rs --crate-type=staticlib -O -o lib-x32.a
+    rustc --target=aarch64-apple-ios lib.rs --crate-type=staticlib -O -o lib-a64.a
+    rustc --target=armv7s-apple-ios lib.rs --crate-type=staticlib -O -o lib-a7s.a
+    rustc --target=armv7-apple-ios lib.rs --crate-type=staticlib -O -o lib-a7.a
+
+    lipo -create lib-x64.a lib-x32.a lib-a64.a lib-a7s.a lib-a7.a -o ../rust-code.a
+    rm *.a
+popd
