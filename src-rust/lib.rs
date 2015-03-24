@@ -1,32 +1,28 @@
 
 mod game;
+mod platform;
 
 use game::GameState;
 
-extern {
-    fn app_log(message: *const u8);
-    fn make_ship(x: f32, y: f32);
-}
+static mut game_state :GameState = game::GAME_STATE_ZERO;
+
 
 #[no_mangle]
-pub extern fn game_touch(state: *mut GameState, x: f32, y: f32) {
+pub extern fn new_game_state(count: u8) {
     unsafe {
-        make_ship(x, y);
+        game_state = GameState::new(count);
     }
 }
 
 #[no_mangle]
-pub extern fn new_game_state(count: u8) -> *mut GameState {
-    let mut game_state = Box::new(GameState::new(count));
-    println!("GameState init");
-    &mut *game_state
-}
-
-#[no_mangle]
-pub extern fn game_update(state: *mut GameState) {
+pub extern fn game_update() {
     unsafe {
-        (*state).update();
-        app_log(format!("Counter set to {}", (*state).get_count()).as_ptr());
+        game_state.update();
+        platform::app_log(&format!("Counter set to {}", game_state.get_count()));
     }
 }
 
+#[no_mangle]
+pub extern fn game_touch(x: f32, y: f32) {
+    platform::make_ship(x, y);
+}

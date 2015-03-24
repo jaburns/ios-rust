@@ -3,6 +3,10 @@ pub struct GameState {
     _counter: u8,
 }
 
+pub const GAME_STATE_ZERO: GameState = GameState {
+    _counter: 0
+};
+
 impl GameState {
     pub fn new(count: u8) -> GameState {
         GameState {
