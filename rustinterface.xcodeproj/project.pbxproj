@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		889A20C81AC1C19200D74F00 /* rust-code.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 889A20C71AC1C19200D74F00 /* rust-code.a */; };
+		88BF9B4E1AC1E80C0077DE9A /* rust_interop.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BF9B4D1AC1E80C0077DE9A /* rust_interop.m */; };
 		88CF8B811AC1BF6A0019DEF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF8B801AC1BF6A0019DEF4 /* main.m */; };
 		88CF8B841AC1BF6A0019DEF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF8B831AC1BF6A0019DEF4 /* AppDelegate.m */; };
 		88CF8B871AC1BF6A0019DEF4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF8B861AC1BF6A0019DEF4 /* GameScene.m */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		889A20C71AC1C19200D74F00 /* rust-code.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "rust-code.a"; sourceTree = "<group>"; };
+		88BF9B4D1AC1E80C0077DE9A /* rust_interop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rust_interop.m; sourceTree = "<group>"; };
 		88CF8B7B1AC1BF6A0019DEF4 /* rustinterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rustinterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CF8B7F1AC1BF6A0019DEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88CF8B801AC1BF6A0019DEF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 		88CF8B991AC1BF6A0019DEF4 /* rustinterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rustinterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CF8B9E1AC1BF6A0019DEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88CF8B9F1AC1BF6A0019DEF4 /* rustinterfaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rustinterfaceTests.m; sourceTree = "<group>"; };
-		88CF8BAB1AC1BFD30019DEF4 /* rust_code.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rust_code.h; sourceTree = "<group>"; };
+		88CF8BAB1AC1BFD30019DEF4 /* rust_interop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rust_interop.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,8 @@
 				88CF8B901AC1BF6A0019DEF4 /* Images.xcassets */,
 				88CF8B921AC1BF6A0019DEF4 /* LaunchScreen.xib */,
 				88CF8B7E1AC1BF6A0019DEF4 /* Supporting Files */,
-				88CF8BAB1AC1BFD30019DEF4 /* rust_code.h */,
+				88CF8BAB1AC1BFD30019DEF4 /* rust_interop.h */,
+				88BF9B4D1AC1E80C0077DE9A /* rust_interop.m */,
 			);
 			path = rustinterface;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CF8B8C1AC1BF6A0019DEF4 /* GameViewController.m in Sources */,
+				88BF9B4E1AC1E80C0077DE9A /* rust_interop.m in Sources */,
 				88CF8B841AC1BF6A0019DEF4 /* AppDelegate.m in Sources */,
 				88CF8B871AC1BF6A0019DEF4 /* GameScene.m in Sources */,
 				88CF8B811AC1BF6A0019DEF4 /* main.m in Sources */,
