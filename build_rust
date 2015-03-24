@@ -7,6 +7,6 @@ pushd src-rust
     rustc --target=armv7s-apple-ios lib.rs --crate-type=staticlib -O -o lib-a7s.a
     rustc --target=armv7-apple-ios lib.rs --crate-type=staticlib -O -o lib-a7.a
 
-    lipo -create lib-x64.a lib-x32.a lib-a64.a lib-a7s.a lib-a7.a -o ../rust-code.a
+    lipo -create lib-x64.a lib-x32.a lib-a64.a lib-a7s.a lib-a7.a -o ../rust_lib.a
     rm *.a
 popd
